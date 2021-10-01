@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<title>Admin</title>
+
+<!-- Mirrored from checkmy.works/panel/login/create_card4.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Sep 2021 07:05:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="keywords" content="MyWeBe : Victory Promo Services, Digital Visiting Card">
+<meta name="description" content="Best digital visiting card online with great design">
+
+<meta charset="utf-8" />
+<link rel='stylesheet' href='../all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" href="../awesome.min.css">
+<link href="../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+<link rel="fav-icon" href="images/logo.png" type="image/png">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="mobile_css.css">
+<script src="master_js.js"></script>
+</head>
+<meta http-equiv="refresh" content="0;URL=login.html">
+<header id="header">
+<div class="logo" onclick="location.href='index-2.html'">
+<img src="images/logo.png"><h3></h3>
+</div>
+<div class="mobile_home">&equiv;</div>
+<div class="head_txt">
+<h3>Hi! Guest </h3>
+<h3> <a href="my_account.html">My Account <i class="fa fa-gear"></i></a></h3>
+<h3>
+<a href="index-2.html"><i class="fa fa-sign-out"></i> Logout</a>
+</h3>
+</div>
+</header>
+<script>
+
+$(document).ready(function(){
+	$('.mobile_home').on('click',function(){
+		$('#header').toggleClass('add_height');
+		
+	})
+})
+
+</script>
+<script>
+$(document).ready(function(){
+  $("form").submit(function(){
+    $('#alert_display_full').css('display','block');
+  });
+});
+</script>
+<style>
+
+</style>
+<div id="alert_display_full">
+<div id="loader1"></div>
+<h3>Loading...</h3>
+</div>
+<meta http-equiv="refresh" content="0;URL=index-2.html">
+<div class="main3">
+<div class="main3">
+<div class="navigator_up">
+<a href="select_theme.html"><div class="nav_cont "><i class="fa fa-map"></i> Select Theme</div></a>
+<a href="create_card2.html"><div class="nav_cont"><i class="fa fa-bank"></i> Company Details</div></a>
+<a href="create_card3.html"><div class="nav_cont"><i class="fa fa-facebook"></i> Social Links</div></a>
+<a href="create_card4.html"><div class="nav_cont active"><i class="fa fa-rupee"></i> Payment Options</div></a>
+<a href="create_card5.html"><div class="nav_cont"><i class="fa fa-ticket"></i> Products & Services</div></a>
+<a href="create_card7.html"><div class="nav_cont"><i class="fa fa-archive"></i> Order Page</div></a>
+<a href="create_card6.html"><div class="nav_cont"><i class="fa fa-image"></i> Image Gallery</div></a>
+<a href="preview_page.html"><div class="nav_cont"><i class="fa fa-laptop"></i> Preview Card</div></a>
+</div>
+<div class="btn_holder">
+<a href="create_card3.html"><div class="back_btn"><i class="fa fa-chevron-circle-left"></i> Back</div></a>
+<a href="create_card5.html"><div class="skip_btn">Skip <i class="fa fa-chevron-circle-right"></i></div></a>
+</div>
+<h1>Payment Options</h1>
+<form id="card_form" action="#" method="POST" enctype="multipart/form-data">
+
+<h3>Payment</h3>
+<div class="input_box"><p>PayTm Number (Optional) </p><input type="text" name="d_paytm" maxlength="20" placeholder="Paytm Number" value=""></div>
+<div class="input_box"><p>Google Pay (Optional) </p><input type="text" name="d_google_pay" maxlength="20" placeholder="Google Pay Number" value=""></div>
+<div class="input_box"><p>PhonePe (Optional) </p><input type="text" name="d_phone_pay" maxlength="20" placeholder="PhonePe Number" value=""></div>
+<h3>Bank Account Details</h3>
+<div class="input_box"><p>Bank Name (Optional) </p><input type="text" name="d_bank_name" maxlength="100" placeholder="Bank Name. Ex. HDFC, SBI etc" value=""></div>
+<div class="input_box"><p>Account Holder Name (Optional) </p><input type="text" name="d_ac_name" maxlength="100" placeholder="Account holder name" value=""></div>
+<div class="input_box"><p>Bank Account Number (Optional) </p><input type="text" name="d_account_no" maxlength="100" placeholder="Account Number" value=""></div>
+<div class="input_box"><p>Bank IFSC Code (Optional) </p><input type="text" name="d_ifsc" maxlength="100" placeholder="IFSC Code" value=""></div>
+<div class="input_box"><p>GST (Optional) </p><input type="text" name="d_ac_type" maxlength="100" value="" placeholder="Enter GST Number...."></div>
+<h3>Payment QR Code</h3>
+<div class="divider"><div class="num">Paytm QR Code</div>
+<img src="images/upload.png" alt="Select image" id="showPreviewLogo10" onclick="clickFocus10()">
+<div class="input_box">
+<script>
+				function clickFocus10(){
+					$('#clickMeImage10').click();
+				}
+				
+				function readURL10(input){
+					if(input.files && input.files[0]){
+						var reader = new FileReader();
+						reader.onload= function (a){
+							$('#showPreviewLogo10').attr('src',a.target.result);
+						};
+						reader.readAsDataURL(input.files[0]);
+					}
+					
+				}
+			</script>
+<input type="file" name="d_qr_paytm" id="clickMeImage10" class="" onchange="readURL10(this);" accept="image/*">
+</div>
+</div>
+<div class="divider"><div class="num">Google Pay QR Code</div>
+<img src="images/upload.png" alt="Select image" id="showPreviewLogo3" onclick="clickFocus3()">
+<div class="input_box">
+<script>
+				function clickFocus(){
+					$('#clickMeImage3').click();
+				}
+				
+				function readURL3(input){
+					if(input.files && input.files[0]){
+						var reader = new FileReader();
+						reader.onload= function (a){
+							$('#showPreviewLogo3').attr('src',a.target.result);
+						};
+						reader.readAsDataURL(input.files[0]);
+					}
+					
+				}
+			</script>
+<input type="file" name="d_qr_google_pay" id="clickMeImage3" class="" onchange="readURL3(this);" accept="image/*">
+</div>
+</div>
+<div class="divider"><div class="num">PhonePe QR Code</div>
+<img src="images/upload.png" alt="Select image" id="showPreviewLogo2" onclick="clickFocus2()">
+<div class="input_box">
+<script>
+				function clickFocus2(){
+					$('#clickMeImage2').click();
+				}
+				
+				function readURL2(input){
+					if(input.files && input.files[0]){
+						var reader = new FileReader();
+						reader.onload= function (a){
+							$('#showPreviewLogo2').attr('src',a.target.result);
+						};
+						reader.readAsDataURL(input.files[0]);
+					}
+					
+				}
+			</script>
+<input type="file" name="d_qr_phone_pay" id="clickMeImage2" class="" onchange="readURL2(this);" accept="image/*">
+</div>
+</div>
+<br>
+<input type="submit" class="" name="process4" value="Next 5" id="block_loader">
+
+</form>
+</div>
+<footer class="">
+<p> checkmy.works || 2020 </p>
+</footer>

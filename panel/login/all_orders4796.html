@@ -1,0 +1,115 @@
+
+<title>Admin</title>
+
+<!-- Mirrored from checkmy.works/panel/login/all_orders.php?filter=Cancel by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Sep 2021 07:04:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="keywords" content="MyWeBe : Victory Promo Services, Digital Visiting Card">
+<meta name="description" content="Best digital visiting card online with great design">
+
+<meta charset="utf-8" />
+<link rel='stylesheet' href='../all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" href="../awesome.min.css">
+<link href="../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+<link rel="fav-icon" href="images/logo.png" type="image/png">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="mobile_css.css">
+<script src="master_js.js"></script>
+</head>
+<meta http-equiv="refresh" content="0;URL=login.html">
+<header id="header">
+<div class="logo" onclick="location.href='index-2.html'">
+<img src="images/logo.png"><h3></h3>
+</div>
+<div class="mobile_home">&equiv;</div>
+<div class="head_txt">
+<h3>Hi! Guest </h3>
+<h3> <a href="my_account.html">My Account <i class="fa fa-gear"></i></a></h3>
+<h3>
+<a href="index-2.html"><i class="fa fa-sign-out"></i> Logout</a>
+</h3>
+</div>
+</header>
+<script>
+
+$(document).ready(function(){
+	$('.mobile_home').on('click',function(){
+		$('#header').toggleClass('add_height');
+		
+	})
+})
+
+</script>
+<script>
+$(document).ready(function(){
+  $("form").submit(function(){
+    $('#alert_display_full').css('display','block');
+  });
+});
+</script>
+<style>
+
+</style>
+<div id="alert_display_full">
+<div id="loader1"></div>
+<h3>Loading...</h3>
+</div>
+
+<script>
+							
+							// if approved
+							
+						
+								function order_status(id){
+										
+										$('#order'+id).html('Wait...');
+										var o_status = document.getElementById("order_status_option"+id);
+										var order_status = o_status.options[o_status.selectedIndex].value;
+									
+									console.log(order_status);
+										$.ajax({
+											url:'js_request.php',
+											method:'POST',
+											data:{order_id:id,order_status:order_status},
+											dataType:'text',
+											success:function(data){
+												$('#order'+id).html(data);
+											}
+											
+										});
+										
+									}
+									
+							</script>
+<div class="container">
+<form action="#" id="filter_option">
+<select name="filter">
+<option>All</option>
+<option>Order Placed</option>
+<option>Shipped</option>
+<option>Complete</option>
+<option>Cancel</option>
+</select>
+<input type="submit" value="Filter">
+</form>
+<div class="card_row">
+<div class="row_contd">Order ID</div>
+<div class="row_contd">Product</div>
+<div class="row_contd">Product ID</div>
+<div class="row_contd">Order Status</div>
+<div class="row_contd">Payment</div>
+<div class="row_contd">Name</div>
+<div class="row_contd">Email</div>
+<div class="row_contd">Contact</div>
+<div class="row_contd">Address</div>
+<div class="row_contd">Action</div>
+<div class="row_contd">Date</div>
+</div>
+<div class="alert info"> No Order Available</div>
+</div>
+<div class="pagination">
+</div>
+<footer class="">
+<p>2020 || checkmy.works </p>
+</footer>
